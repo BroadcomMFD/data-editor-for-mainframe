@@ -26,6 +26,8 @@ Before you install Data Editor for Mainframe, ensure that your site and workstat
 
 ### Server
 - File Master Plus version 11 or higher
+- If you use File Master Plus version 11, acquire and install PTF LU21252
+- If you use File Master Plus version 12, acquire and install PTF LU21249
 - File Master Plus Server with GUI API enabled
 - To connect to Data Editor for Mainframe through the Zowe API Mediation Layer, integrate your File Master Plus Server with Zowe API ML.
 
