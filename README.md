@@ -7,11 +7,11 @@
 
 # Data Editor for Mainframe
 
-The Data Editor for Mainframe extension for VS Code adds a modern user interface to [File Master Plus for MVS](https://www.broadcom.com/products/mainframe/testing-and-quality/file-master-plus). Data Editor for Mainframe allows you to: 
+The Data Editor for Mainframe Code4z extension adds a modern user interface to [File Master Plus for MVS](https://www.broadcom.com/products/mainframe/testing-and-quality/file-master-plus). The Data Editor for Mainframe extension enables engineers to view and edit test data directly in VS Code without needing to submit jobs or use the traditional 3270 green screen interface. Data Editor for Mainframe includes the following features:
 
 - Browse and edit VSAM data sets, sequential data sets and PDS members.
 - Apply layouts to view data set records in single-record format.
-- Interactively filter records using selection criteria. 
+- Interactively filter records using selection criteria.
 
 <img align="left" alt="This extension is part of the Code4z experience" width="80" height="82" src="https://raw.githubusercontent.com/BroadcomMFD/code4z/refs/heads/main/icon5.png" />
 
@@ -25,7 +25,9 @@ Data Editor for Mainframe is part of the [Code4z](https://techdocs.broadcom.com/
 Before you install Data Editor for Mainframe, ensure that your site and workstation meet the following requirements:
 
 ### Server
-- File Master Plus version 10 or higher
+- File Master Plus version 11 or higher
+- If you use File Master Plus version 11, acquire and install PTF LU21252
+- If you use File Master Plus version 12, acquire and install PTF LU21249
 - File Master Plus Server with GUI API enabled
 - To connect to Data Editor for Mainframe through the Zowe API Mediation Layer, integrate your File Master Plus Server with Zowe API ML.
 
@@ -59,7 +61,7 @@ If you do not have Zowe Explorer installed and configured, you can start browse 
 <details>
 <summary id="add-a-connection-to-the-mainframe"><span style="font-size: 1.5em"><b>Add a Connection to the Mainframe</b></span><hr></summary>
 
-In the **Server URL** field of the Data Editor for Mainframe extension settings, specify one of the following: 
+In the **Server URL** field of the Data Editor for Mainframe extension settings, specify one of the following:
 - The host URL and port of your File Master Plus Server instance in the format `http(s)://host:port`
 - The host URL, port and service ID of your Zowe API ML Gateway instance in the format `http(s)://host:port/serviceid/api/v1`
 
@@ -70,9 +72,9 @@ In the **Server URL** field of the Data Editor for Mainframe extension settings,
 <details>
 <summary id="browse-a-data-set"><span style="font-size: 1.5em"><b>Browse a Data Set</b></span><hr></summary>
 
-To start a Browse session using Data Editor for Mainframe, locate the data set in the Zowe Explorer tree, right click and select **Browse with Data Editor for Mainframe**. 
+To start a Browse session using Data Editor for Mainframe, locate the data set in the Zowe Explorer tree, right click and select **Browse with Data Editor for Mainframe**.
 
-If you do not have Zowe Explorer installed, press **F1** to open the command palette, and run the command **Browse with Data Editor for Mainframe**. Insert your mainframe username and password when prompted. 
+If you do not have Zowe Explorer installed, press **F1** to open the command palette, and run the command **Browse with Data Editor for Mainframe**. Insert your mainframe username and password when prompted.
 
 The data set opens in Character view.
 
@@ -83,9 +85,9 @@ To show or hide the hexadecimal value of a record in Character view, use the arr
 <details>
 <summary id="edit-a-data-set"><span style="font-size: 1.5em"><b>Edit a Data Set</b></span><hr></summary>
 
-To start an Edit session using Data Editor for Mainframe, locate the data set in the Zowe Explorer tree, right click and select **Edit with Data Editor for Mainframe**. 
+To start an Edit session using Data Editor for Mainframe, locate the data set in the Zowe Explorer tree, right click and select **Edit with Data Editor for Mainframe**.
 
-If you do not have Zowe Explorer installed, press **F1** to open the command palette, and run the command **Edit with Data Editor for Mainframe**. Insert your mainframe username and password when prompted. 
+If you do not have Zowe Explorer installed, press **F1** to open the command palette, and run the command **Edit with Data Editor for Mainframe**. Insert your mainframe username and password when prompted.
 
 You can edit records in a data set either in Character view, or in Single-Record view after you apply a record layout. Changes are first saved locally to VS Code and then saved to the mainframe. Protected fields are highlighted and cannot be edited.
 
